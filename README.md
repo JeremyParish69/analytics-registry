@@ -10,29 +10,22 @@ E.g., CoinGecko
   "interfaces": [
     {
       "type": "browser",
-      "parameters": {
-        "base_url": "https://www.coingecko.com/",
-        "asset_id": true
-      },
+      "base_url": "https://www.coingecko.com",
       "requests": {
         "asset": "{base_url}/coins/{asset_id}"
       }
     },
     {
       "type": "rest_api",
-      "parameters": {
-        "base_url": "https://www.coingecko.com/api/v3",
-        "asset_id": true,
-        "fiat_currency_id": true
-      },
+      "base_url": "https://www.coingecko.com/api/v3",
       "requests": {
         "ping": "{base_url}/ping",
         "asset_ids": "{base_url}/coins/list",
         "asset": "{base_url}/coins/{id}",
-        "asset_price": "{base_url}/simple/price?ids={asset_id}&vs_currencies={fiat_currency_id}",
+        "price": "{base_url}/simple/price?ids={asset_id}&vs_currencies={fiat_currency_id}",
         "market_cap": "{base_url}/simple/price?ids={asset_id}&vs_currencies={fiat_currency_id}&include_market_cap=true",
         "volume_24h": "{base_url}/simple/price?ids={asset_id}&vs_currencies={fiat_currency_id}&include_24hr_vol=true",
-        "price_change_percent_24h": "{base_url}/simple/price?ids={asset_id}&vs_currencies={fiat_currency_id}&include_24hr_change=true"
+        "price_change_24h_percent": "{base_url}/simple/price?ids={asset_id}&vs_currencies={fiat_currency_id}&include_24hr_change=true"
       }
     }
   ],
@@ -58,6 +51,68 @@ E.g., CoinGecko
         "chain_name": "osmosis",
         "base_denom": "uion",
         "id": "ion"
+      }
+    ]
+  }
+}
+```
+
+E.g., Mintscan Explorer
+```
+{
+  "provider": "Mintscan",
+  "website": "https://www.mintscan.io",
+  "interfaces": [
+    {
+      "type": "browser",
+      "base_url": "https://www.mintscan.io",
+      "requests": {
+        "chain": "{base_url}/{chain_id}",
+        "chain_parameters": "{base_url}/{chain_id}/parameters",
+        "txs": "{base_url}/{chain_id}/txs",
+        "tx_hash": "{base_url}/{chain_id}/txs/{tx_hash}",
+        "account_bech32": "{base_url}/{chain_id}/account/{account_address}",
+        "validators": "{base_url}/{chain_id}/validators",
+        "validator_bech32": "{base_url}/{chain_id}/validators/{validator_address}",
+        "contracts": "{base_url}/{chain_id}/wasm/",
+        "contract_bech32": "{base_url}/{chain_id}/wasm/contract/{contract_address}",
+        "blocks": "{base_url}/{chain_id}/blocks",
+        "block": "{base_url}/{chain_id}/blocks/{block_number}",
+        "proposals": "{base_url}/{chain_id}/proposals",
+        "proposal": "{base_url}/{chain_id}/proposals/{proposal_number}",
+        "chain_assets": "{base_url}/{chain_id}/assets",
+        "chain_asset": "{base_url}/{chain_id}/assets/{asset_id}",
+        "ibc_connections": "{base_url}/{chain_id}/relayers",
+        "ibc_connection": "{base_url}/{chain_id}/relayers/{channel_id}"
+      }
+    }
+  ],
+  "ids": {
+    "chains": [
+      {
+        "chain_name": "cosmoshub",
+        "id": "cosmos"
+      },
+      {
+        "chain_name": "osmosis",
+        "id": "osmosis"
+      }
+    ],
+    "assets": [
+      {
+        "chain_name": "cosmoshub",
+        "base_denom": "uatom",
+        "id": "dWF0b20=?type=staking"
+      },
+      {
+        "chain_name": "osmosis",
+        "base_denom": "uosmo",
+        "id": "dW9zbW8=?type=staking"
+      },
+      {
+        "chain_name": "osmosis",
+        "base_denom": "uion",
+        "id": "dWlvbg==?type=native"
       }
     ]
   }
