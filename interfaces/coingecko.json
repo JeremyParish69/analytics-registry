@@ -6,20 +6,20 @@
       "type": "browser",
       "base_url": "https://www.coingecko.com",
       "requests": {
-        "asset": "{base_url}/coins/{asset_id}"
+        "asset": "${base_url}/coins/${asset_id}"
       }
     },
     {
       "type": "rest_api",
       "base_url": "https://www.coingecko.com/api/v3",
       "requests": {
-        "ping": "{base_url}/ping",
-        "asset_ids": "{base_url}/coins/list",
-        "asset": "{base_url}/coins/{id}",
-        "price": "{base_url}/simple/price?ids={asset_id}&vs_currencies={fiat_currency_id}",
-        "market_cap": "{base_url}/simple/price?ids={asset_id}&vs_currencies={fiat_currency_id}&include_market_cap=true",
-        "volume_24h": "{base_url}/simple/price?ids={asset_id}&vs_currencies={fiat_currency_id}&include_24hr_vol=true",
-        "price_change_24h_percent": "{base_url}/simple/price?ids={asset_id}&vs_currencies={fiat_currency_id}&include_24hr_change=true"
+        "ping": "${base_url}/ping",
+        "asset_ids": "${base_url}/coins/list",
+        "asset": "${base_url}/coins/${id}",
+        "price": "${base_url}/simple/price?ids=${asset_id}&vs_currencies=${fiat_currency_id}",
+        "market_cap": "${base_url}/simple/price?ids=${asset_id}&vs_currencies=${fiat_currency_id}&include_market_cap=true",
+        "volume_24h": "${base_url}/simple/price?ids=${asset_id}&vs_currencies=${fiat_currency_id}&include_24hr_vol=true",
+        "price_change_24h_percent": "${base_url}/simple/price?ids=${asset_id}&vs_currencies=${fiat_currency_id}&include_24hr_change=true"
       }
     }
   ],
