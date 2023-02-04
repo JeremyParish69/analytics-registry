@@ -12,20 +12,20 @@ E.g., CoinGecko
       "type": "browser",
       "base_url": "https://www.coingecko.com",
       "requests": {
-        "asset": "{base_url}/coins/{asset_id}"
+        "asset": "${base_url}/coins/${asset_id}"
       }
     },
     {
       "type": "rest_api",
       "base_url": "https://www.coingecko.com/api/v3",
       "requests": {
-        "ping": "{base_url}/ping",
-        "asset_ids": "{base_url}/coins/list",
-        "asset": "{base_url}/coins/{id}",
-        "price": "{base_url}/simple/price?ids={asset_id}&vs_currencies={fiat_currency_id}",
-        "market_cap": "{base_url}/simple/price?ids={asset_id}&vs_currencies={fiat_currency_id}&include_market_cap=true",
-        "volume_24h": "{base_url}/simple/price?ids={asset_id}&vs_currencies={fiat_currency_id}&include_24hr_vol=true",
-        "price_change_24h_percent": "{base_url}/simple/price?ids={asset_id}&vs_currencies={fiat_currency_id}&include_24hr_change=true"
+        "ping": "${base_url}/ping",
+        "asset_ids": "${base_url}/coins/list",
+        "asset": "${base_url}/coins/${id}",
+        "price": "${base_url}/simple/price?ids=${asset_id}&vs_currencies=${fiat_currency_id}",
+        "market_cap": "${base_url}/simple/price?ids=${asset_id}&vs_currencies=${fiat_currency_id}&include_market_cap=true",
+        "volume_24h": "${base_url}/simple/price?ids=${asset_id}&vs_currencies=${fiat_currency_id}&include_24hr_vol=true",
+        "price_change_24h_percent": "${base_url}/simple/price?ids=${asset_id}&vs_currencies=${fiat_currency_id}&include_24hr_change=true"
       }
     }
   ],
@@ -67,23 +67,23 @@ E.g., Mintscan Explorer
       "type": "browser",
       "base_url": "https://www.mintscan.io",
       "requests": {
-        "chain": "{base_url}/{chain_id}",
-        "chain_parameters": "{base_url}/{chain_id}/parameters",
-        "txs": "{base_url}/{chain_id}/txs",
-        "tx_hash": "{base_url}/{chain_id}/txs/{tx_hash}",
-        "account_bech32": "{base_url}/{chain_id}/account/{account_address}",
-        "validators": "{base_url}/{chain_id}/validators",
-        "validator_bech32": "{base_url}/{chain_id}/validators/{validator_address}",
-        "contracts": "{base_url}/{chain_id}/wasm/",
-        "contract_bech32": "{base_url}/{chain_id}/wasm/contract/{contract_address}",
-        "blocks": "{base_url}/{chain_id}/blocks",
-        "block": "{base_url}/{chain_id}/blocks/{block_number}",
-        "proposals": "{base_url}/{chain_id}/proposals",
-        "proposal": "{base_url}/{chain_id}/proposals/{proposal_number}",
-        "chain_assets": "{base_url}/{chain_id}/assets",
-        "chain_asset": "{base_url}/{chain_id}/assets/{asset_id}",
-        "ibc_connections": "{base_url}/{chain_id}/relayers",
-        "ibc_connection": "{base_url}/{chain_id}/relayers/{channel_id}"
+        "chain": "${base_url}/${chain_id}",
+        "chain_parameters": "${base_url}/${chain_id}/parameters",
+        "txs": "${base_url}/${chain_id}/txs",
+        "tx_hash": "${base_url}/${chain_id}/txs/${tx_hash}",
+        "account_bech32": "${base_url}/${chain_id}/account/${account_address}",
+        "validators": "${base_url}/${chain_id}/validators",
+        "validator_bech32": "${base_url}/${chain_id}/validators/${validator_address}",
+        "contracts": "${base_url}/${chain_id}/wasm/",
+        "contract_bech32": "${base_url}/${chain_id}/wasm/contract/${contract_address}",
+        "blocks": "${base_url}/${chain_id}/blocks",
+        "block": "${base_url}/${chain_id}/blocks/${block_number}",
+        "proposals": "${base_url}/${chain_id}/proposals",
+        "proposal": "${base_url}/${chain_id}/proposals/${proposal_number}",
+        "chain_assets": "${base_url}/${chain_id}/assets",
+        "chain_asset": "${base_url}/${chain_id}/assets/${asset_id}",
+        "ibc_connections": "${base_url}/${chain_id}/relayers",
+        "ibc_connection": "${base_url}/${chain_id}/relayers/${channel_id}"
       }
     }
   ],
