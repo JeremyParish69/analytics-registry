@@ -1,0 +1,566 @@
+{
+  "provider": "CoinGecko",
+  "website": "https://www.coingecko.com",
+  "interfaces": [
+    {
+      "type": "browser",
+      "base_url": "https://www.coingecko.com",
+      "requests": {
+        "asset": "{base_url}/coins/{asset_id}"
+      }
+    },
+    {
+      "type": "rest_api",
+      "base_url": "https://www.coingecko.com/api/v3",
+      "requests": {
+        "ping": "{base_url}/ping",
+        "asset_ids": "{base_url}/coins/list",
+        "asset": "{base_url}/coins/{id}",
+        "price": "{base_url}/simple/price?ids={asset_id}&vs_currencies={fiat_currency_id}",
+        "market_cap": "{base_url}/simple/price?ids={asset_id}&vs_currencies={fiat_currency_id}&include_market_cap=true",
+        "volume_24h": "{base_url}/simple/price?ids={asset_id}&vs_currencies={fiat_currency_id}&include_24hr_vol=true",
+        "price_change_24h_percent": "{base_url}/simple/price?ids={asset_id}&vs_currencies={fiat_currency_id}&include_24hr_change=true"
+      }
+    }
+  ],
+  "ids": {
+    "fiat_currencies": [
+      {
+        "name": "USD",
+        "id": "usd"
+      }
+    ],
+    "assets": [
+      {
+        "chain_name": "acrechain",
+        "base_denom": "aacre",
+        "id": "arable-protocol"
+      },
+      {
+        "chain_name": "acrechain",
+        "base_denom": "erc20/0x2Cbea61fdfDFA520Ee99700F104D5b75ADf50B0c",
+        "id": "arable-usd"
+      },
+      {
+        "chain_name": "agoric",
+        "base_denom": "ubld",
+        "id": "agoric"
+      },
+      {
+        "chain_name": "aioz",
+        "base_denom": "attoaioz",
+        "id": "aioz-network"
+      },
+      {
+        "chain_name": "akash",
+        "base_denom": "uakt",
+        "id": "akash-network"
+      },
+      {
+        "chain_name": "assetmantle",
+        "base_denom": "umntl",
+        "id": "assetmantle"
+      },
+      {
+        "chain_name": "axelar",
+        "base_denom": "uaxl",
+        "id": "axelar"
+      },
+      {
+        "chain_name": "bandchain",
+        "base_denom": "uband",
+        "id": "band-protocol"
+      },
+      {
+        "chain_name": "beezee",
+        "base_denom": "ubze",
+        "id": "bzedge"
+      },
+      {
+        "chain_name": "bitcanna",
+        "base_denom": "ubcna",
+        "id": "bitcanna"
+      },
+      {
+        "chain_name": "bitsong",
+        "base_denom": "ubtsg",
+        "id": "bitsong"
+      },
+      {
+        "chain_name": "bostrom",
+        "base_denom": "boot",
+        "id": "bostrom"
+      },
+      {
+        "chain_name": "canto",
+        "base_denom": "acanto",
+        "id": "canto"
+      },
+      {
+        "chain_name": "carbon",
+        "base_denom": "swth",
+        "id": "switcheo"
+      },
+      {
+        "chain_name": "cerberus",
+        "base_denom": "ucrbrus",
+        "id": "cerberus-2"
+      },
+      {
+        "chain_name": "cheqd",
+        "base_denom": "ncheq",
+        "id": "cheqd-network"
+      },
+      {
+        "chain_name": "chihuahua",
+        "base_denom": "uhuahua",
+        "id": "chihuahua-token"
+      },
+      {
+        "chain_name": "chronicnetwork",
+        "base_denom": "ucht",
+        "id": "cht"
+      },
+      {
+        "chain_name": "chronicnetwork",
+        "base_denom": "ucgas",
+        "id": "cgas"
+      },
+      {
+        "chain_name": "comdex",
+        "base_denom": "ucmdx",
+        "id": "comdex"
+      },
+      {
+        "chain_name": "comdex",
+        "base_denom": "ucmst",
+        "id": "composite"
+      },
+      {
+        "chain_name": "cosmoshub",
+        "base_denom": "uatom",
+        "id": "cosmos"
+      },
+      {
+        "chain_name": "crescent",
+        "base_denom": "ucre",
+        "id": "crescent-network"
+      },
+      {
+        "chain_name": "crescent",
+        "base_denom": "ubcre",
+        "id": "liquid-staking-crescent"
+      },
+      {
+        "chain_name": "cronos",
+        "base_denom": "basecro",
+        "id": "crypto-com-chain"
+      },
+      {
+        "chain_name": "cryptoorgchain",
+        "base_denom": "basecro",
+        "id": "crypto-com-chain"
+      },
+      {
+        "chain_name": "cudos",
+        "base_denom": "acudos",
+        "id": "cudos"
+      },
+      {
+        "chain_name": "decentr",
+        "base_denom": "udec",
+        "id": "decentr"
+      },
+      {
+        "chain_name": "desmos",
+        "base_denom": "udsm",
+        "id": "desmos"
+      },
+      {
+        "chain_name": "dig",
+        "base_denom": "udig",
+        "id": "dig-chain"
+      },
+      {
+        "chain_name": "echelon",
+        "base_denom": "aechelon",
+        "id": "echelon"
+      },
+      {
+        "chain_name": "emoney",
+        "base_denom": "ungm",
+        "id": "e-money"
+      },
+      {
+        "chain_name": "emoney",
+        "base_denom": "eeur",
+        "id": "e-money-eur"
+      },
+      {
+        "chain_name": "evmos",
+        "base_denom": "aevmos",
+        "id": "evmos"
+      },
+      {
+        "chain_name": "fetchhub",
+        "base_denom": "afet",
+        "id": "fetch-ai"
+      },
+      {
+        "chain_name": "firmachain",
+        "base_denom": "ufct",
+        "id": "firmachain"
+      },
+      {
+        "chain_name": "gravitybridge",
+        "base_denom": "ugraviton",
+        "id": "graviton"
+      },
+      {
+        "chain_name": "impacthub",
+        "base_denom": "uixo",
+        "id": "ixo"
+      },
+      {
+        "chain_name": "imversed",
+        "base_denom": "aimv",
+        "id": "imv"
+      },
+      {
+        "chain_name": "injective",
+        "base_denom": "inj",
+        "id": "injective-protocol"
+      },
+      {
+        "chain_name": "irisnet",
+        "base_denom": "uiris",
+        "id": "iris-network"
+      },
+      {
+        "chain_name": "jackal",
+        "base_denom": "ujkl",
+        "id": "jackal-protocol"
+      },
+      {
+        "chain_name": "juno",
+        "base_denom": "ujuno",
+        "id": "juno-network"
+      },
+      {
+        "chain_name": "juno",
+        "base_denom": "cw20:juno168ctmpyppk90d34p3jjy658zf5a5l3w8wk35wht6ccqj4mr0yv8s4j5awr",
+        "id": "neta"
+      },
+      {
+        "chain_name": "juno",
+        "base_denom": "cw20:juno1g2g7ucurum66d42g8k5twk34yegdq8c82858gz0tq2fc75zy7khssgnhjl",
+        "id": "marble"
+      },
+      {
+        "chain_name": "juno",
+        "base_denom": "cw20:juno1re3x67ppxap48ygndmrc7har2cnc7tcxtm9nplcas4v0gc3wnmvs3s807z",
+        "id": "hope-galaxy"
+      },
+      {
+        "chain_name": "juno",
+        "base_denom": "cw20:juno1r4pzw8f9z0sypct5l9j906d47z998ulwvhvqe5xdwgy8wf84583sxwh0pa",
+        "id": "racoon"
+      },
+      {
+        "chain_name": "juno",
+        "base_denom": "cw20:juno15u3dt79t6sxxa3x3kpkhzsy56edaa5a66wvt3kxmukqjz2sx0hes5sn38g",
+        "id": "junoswap-raw-dao"
+      },
+      {
+        "chain_name": "juno",
+        "base_denom": "cw20:juno1dd0k0um5rqncfueza62w9sentdfh3ec4nw4aq4lk5hkjl63vljqscth9gv",
+        "id": "stakeeasy-juno-derivative"
+      },
+      {
+        "chain_name": "juno",
+        "base_denom": "cw20:juno1wwnhkagvcd3tjz6f8vsdsw5plqnw8qy2aj3rrhqr2axvktzv9q2qz8jxn3",
+        "id": "stakeeasy-bjuno"
+      },
+      {
+        "chain_name": "juno",
+        "base_denom": "cw20:juno19rqljkh95gh40s7qdx40ksx3zq5tm4qsmsrdz9smw668x9zdr3lqtg33mf",
+        "id": "seasy"
+      },
+      {
+        "chain_name": "juno",
+        "base_denom": "cw20:juno1qsrercqegvs4ye0yqg93knv73ye5dc3prqwd6jcdcuj8ggp6w0us66deup",
+        "id": "loop"
+      },
+      {
+        "chain_name": "juno",
+        "base_denom": "cw20:juno1cltgm8v842gu54srmejewghnd6uqa26lzkpa635wzra9m9xuudkqa2gtcz",
+        "id": "fanfury"
+      },
+      {
+        "chain_name": "juno",
+        "base_denom": "cw20:juno1rws84uz7969aaa7pej303udhlkt3j9ca0l3egpcae98jwak9quzq8szn2l",
+        "id": "posthuman"
+      },
+      {
+        "chain_name": "kava",
+        "base_denom": "ukava",
+        "id": "kava"
+      },
+      {
+        "chain_name": "kava",
+        "base_denom": "hard",
+        "id": "kava-lend"
+      },
+      {
+        "chain_name": "kava",
+        "base_denom": "swp",
+        "id": "kava-swap"
+      },
+      {
+        "chain_name": "kava",
+        "base_denom": "usdx",
+        "id": "usdx"
+      },
+      {
+        "chain_name": "kichain",
+        "base_denom": "uxki",
+        "id": "ki"
+      },
+      {
+        "chain_name": "kichain",
+        "base_denom": "cw20:ki1dt3lk455ed360pna38fkhqn0p8y44qndsr77qu73ghyaz2zv4whq83mwdy",
+        "id": "lvn"
+      },
+      {
+        "chain_name": "konstellation",
+        "base_denom": "udarc",
+        "id": "darcmatter-coin"
+      },
+      {
+        "chain_name": "kujira",
+        "base_denom": "ukuji",
+        "id": "kujira"
+      },
+      {
+        "chain_name": "kujira",
+        "base_denom": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk",
+        "id": "usk"
+      },
+      {
+        "chain_name": "lambda",
+        "base_denom": "ulamb",
+        "id": "lambda"
+      },
+      {
+        "chain_name": "likecoin",
+        "base_denom": "nanolike",
+        "id": "likecoin"
+      },
+      {
+        "chain_name": "lumnetwork",
+        "base_denom": "ulum",
+        "id": "lum-network"
+      },
+      {
+        "chain_name": "nyx",
+        "base_denom": "unym",
+        "id": "nym"
+      },
+      {
+        "chain_name": "odin",
+        "base_denom": "loki",
+        "id": "odin-protocol"
+      },
+      {
+        "chain_name": "okexchain",
+        "base_denom": "wei",
+        "id": "oec-token"
+      },
+      {
+        "chain_name": "omniflixhub",
+        "base_denom": "uflix",
+        "id": "omniflix-network"
+      },
+      {
+        "chain_name": "oraichain",
+        "base_denom": "orai",
+        "id": "oraichain-token"
+      },
+      {
+        "chain_name": "osmosis",
+        "base_denom": "uosmo",
+        "id": "osmosis"
+      },
+      {
+        "chain_name": "osmosis",
+        "base_denom": "uion",
+        "id": "ion"
+      },
+      {
+        "chain_name": "panacea",
+        "base_denom": "umed",
+        "id": "medibloc"
+      },
+      {
+        "chain_name": "persistence",
+        "base_denom": "uxprt",
+        "id": "persistence"
+      },
+      {
+        "chain_name": "point",
+        "base_denom": "apoint",
+        "id": "point-network"
+      },
+      {
+        "chain_name": "provenance",
+        "base_denom": "nhash",
+        "id": "provenance-blockchain"
+      },
+      {
+        "chain_name": "quicksilver",
+        "base_denom": "uqck",
+        "id": "quicksilver"
+      },
+      {
+        "chain_name": "regen",
+        "base_denom": "uregen",
+        "id": "regen"
+      },
+      {
+        "chain_name": "rizon",
+        "base_denom": "uatolo",
+        "id": "rizon"
+      },
+      {
+        "chain_name": "secretnetwork",
+        "base_denom": "uscrt",
+        "id": "secret"
+      },
+      {
+        "chain_name": "secretnetwork",
+        "base_denom": "cw20:secret1rgm2m5t530tdzyd99775n6vzumxa5luxcllml4",
+        "id": "sienna"
+      },
+      {
+        "chain_name": "secretnetwork",
+        "base_denom": "cw20:secret1qfql357amn448duf5gvp9gr48sxx9tsnhupu3d",
+        "id": "shade-protocol"
+      },
+      {
+        "chain_name": "secretnetwork",
+        "base_denom": "cw20:secret1k6u0cy4feepm6pehnz804zmwakuwdapm69tuc4",
+        "id": "stkd-scrt"
+      },
+      {
+        "chain_name": "secretnetwork",
+        "base_denom": "cw20:secret1yxcexylwyxlq58umhgsjgstgcg2a0ytfy4d9lt",
+        "id": "buttcoin-2"
+      },
+      {
+        "chain_name": "secretnetwork",
+        "base_denom": "cw20:secret12rcvz0umvk875kd6a803txhtlu7y0pnd73kcej",
+        "id": "alter"
+      },
+      {
+        "chain_name": "sentinel",
+        "base_denom": "udvpn",
+        "id": "sentinel"
+      },
+      {
+        "chain_name": "shareledger",
+        "base_denom": "nshr",
+        "id": "shareledger"
+      },
+      {
+        "chain_name": "shentu",
+        "base_denom": "uctk",
+        "id": "certik"
+      },
+      {
+        "chain_name": "sifchain",
+        "base_denom": "rowan",
+        "id": "sifchain"
+      },
+      {
+        "chain_name": "sommelier",
+        "base_denom": "usomm",
+        "id": "sommelier"
+      },
+      {
+        "chain_name": "stafihub",
+        "base_denom": "ufis",
+        "id": "stafi"
+      },
+      {
+        "chain_name": "stargaze",
+        "base_denom": "ustars",
+        "id": "stargaze"
+      },
+      {
+        "chain_name": "starname",
+        "base_denom": "uiov",
+        "id": "starname"
+      },
+      {
+        "chain_name": "stride",
+        "base_denom": "ustrd",
+        "id": "stride"
+      },
+      {
+        "chain_name": "stride",
+        "base_denom": "stuatom",
+        "id": "stride-staked-atom"
+      },
+      {
+        "chain_name": "teritori",
+        "base_denom": "utori",
+        "id": "teritori"
+      },
+      {
+        "chain_name": "terra",
+        "base_denom": "uluna",
+        "id": "terra-luna"
+      },
+      {
+        "chain_name": "terra",
+        "base_denom": "uusd",
+        "id": "terrausd"
+      },
+      {
+        "chain_name": "terra",
+        "base_denom": "ukrw",
+        "id": "terrakrw"
+      },
+      {
+        "chain_name": "terra",
+        "base_denom": "cw20:terra1php5m8a6qd68z02t3zpw4jv2pj4vgw4wz0t8mz",
+        "id": "white-whale"
+      },
+      {
+        "chain_name": "terra2",
+        "base_denom": "uluna",
+        "id": "terra-luna-2"
+      },
+      {
+        "chain_name": "tgrade",
+        "base_denom": "utgd",
+        "id": "tgrade"
+      },
+      {
+        "chain_name": "umee",
+        "base_denom": "uumee",
+        "id": "umee"
+      },
+      {
+        "chain_name": "unification",
+        "base_denom": "nund",
+        "id": "unification"
+      },
+      {
+        "chain_name": "vidulum",
+        "base_denom": "uvdl",
+        "id": "vidulum"
+      }
+    ]
+  }
+}
