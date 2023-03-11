@@ -1,6 +1,6 @@
-# Cosmos Analytics Registry
+# Cosmos Interface Registry
 
-The Cosmos Analytics Registry is the registry for data and analytics interfaces supporting any of the Cosmos Ecosystem. It can be used for many data providers, such as price aggregator api providers (e.g., CoinGecko), block explorers (e.g., Mintscan), or many other analytics or data interfaces.
+The Cosmos Interface Registry is the registry for data and analytics interfaces supporting any of the Cosmos Ecosystem. It can be used for many data providers, such as price aggregators (e.g., CoinGecko), block explorers (e.g., Mintscan), chain endpoints (e.g., Keplr's chain endpoints), and many other analytics or data interfaces.
 
 E.g., CoinGecko
 ```
